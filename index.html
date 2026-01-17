@@ -108,6 +108,35 @@
             color: #1e3c72;
             text-decoration: underline;
         }
+     #certificates
+        { 
+            padding: 2rem;
+            background: #f9fafb;
+        }
+        #certificates h2 
+        { 
+            font-size: 1.8rem;
+            margin-bottom: 1rem; 
+        } 
+        .cert-grid 
+        {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; 
+        }
+        .cert-grid a { display: block; padding: 1rem; 
+                      background: #fff; 
+                      border: 1px solid #ddd;
+                      border-radius: 6px;
+                      text-align: center; 
+                      text-decoration: none; 
+                      color: #1d4ed8;
+                      transition: 0.3s;
+                     }
+        .cert-grid a:hover 
+        { 
+            background: #eef2ff;
+            border-color: #c7d2fe;
+        }
     </style>
 </head>
 
@@ -142,8 +171,17 @@ View Certificate</a>
     <a href="certificate%202.png" target="_blank">
     View Certificate</a>
     </h2>
+    <section id="certificates">
+        <h2>Certificates</h2>
+        <div class="cert-grid">
+            <a href="certificate1. jpeg" target="_blank">Certificate 1</a> 
+            <a href="certificate2.png" target="_blank">Certificate 2</a>
+            <a href="certificate3.png" target="_blank">Certificate 3</a> 
+        </div>
+    </section>
 </body>
 </html>
+
 
 
 
