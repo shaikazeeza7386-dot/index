@@ -144,17 +144,23 @@
             background: #eef2ff;
             border-color: #c7d2fe;
         }
-        .link-github {
-  color: #0f172a; /* slate-900 */
-  text-decoration: none;
+      .email-inline {
+  color: #2563eb; /* blue-600 */
   font-weight: 600;
+  text-decoration: none;
   border-bottom: 2px solid transparent;
   transition: color 200ms ease, border-color 200ms ease;
 }
-.link-github:hover {
-  color: #2563eb; /* blue-600 */
-  border-color: #2563eb;
+.email-inline:hover {
+  color: #1d4ed8; /* blue-700 */
+  border-color: #93c5fd; /* blue-300 */
 }
+.email-inline:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 
     </style>
 </head>
@@ -174,18 +180,21 @@
         <li>CSS</li>
     </ul>
 
-    <h2>Projects</h2>
-    <p>1. Number Guessing Game (Python)</p>
-    <p>2.Personal Portfolio Website (HTML/CSS)</p>
+  
+    <div class="projects">
+  <h2>Projects</h2>
+  <ol>
+    <li>Number Guessing Game (Python)</li>
+    <li>Personal Portfolio Website (HTML/CSS)</li>
+  </ol>
+  <p>
+    <strong>Email:</strong>
+    <a href="mailto:shaikazeeza7386@gmail.com" class="email-inline">
+      shaikazeeza7386@gmail.com
+    </a>
+  </p>
+</div>
 
-    
-    <p>Email: shaikazeeza7386@gmail.com </p>
-    <a href="https://shaikazeeza7386-dot.github.io/index/"
-  class="link-github"
-  target="_blank"
-  rel="noopener"
-  aria-label="Visit my GitHub profile (opens in a new tab)"> GitHub
-</a>
 
     
      
@@ -199,6 +208,7 @@
     </section>
 </body>
 </html>
+
 
 
 
