@@ -1,241 +1,128 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
+<meta charset="UTF-8">
+<title>Azeeza Portfolio</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-    <style>
-         body {
-      background-color:aqua; 
-        body {
-            margin: 0 auto;
-            padding: 30px;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #eef2f3, #d9e4f5);
-            color: #333;
-            max-width: 900px;
-        }
-
-        /* Headings */
-        h1 {
-            text-align: center;
-            color: #1e3c72; 
-            font-size: 42px;
-            margin-bottom: 5px;
-        }
-             
-
-        p:first-of-type {
-            text-align: center;
-            font-size: 18px;
-            color: #555;
-            margin-bottom: 40px;
-        }
-          
-
-
-
-        h2 {
-            background-color: #1e3c72;
-            color: white;
-            padding: 10px;
-            border-radius: 6px;
-            margin-top: 40px;
-        }
-
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        /* Skills */
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            display: inline-block;
-            background-color: white;
-            color: #1e3c72;
-            padding: 10px 15px;
-            margin: 8px;
-            border-radius: 20px;
-            font-weight: 500;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        ul li:hover {
-            background-color: #1e3c72;
-            color: white;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-
-        /* Project cards */
-        h2 + p {
-            background-color: white;
-            padding: 12px;
-            border-radius: 6px;
-            margin: 10px 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        /* Input field */
-        input[type="text"] {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #1e3c72;
-            border-radius: 6px;
-            font-size: 16px;
-            font-family: 'Poppins', sans-serif;
-            box-sizing: border-box;
-        }
-
-        /* Contact */
-        h2:last-of-type + p {
-            font-weight: 500;
-            background-color: white;
-            padding: 15px;
-            border-radius: 6px;
-        }
-
-        /* Certificate Link */
-        a {
-            color: black;
-            text-decoration: none;
-            font-weight: 300;
-            transition: 0.3s;
-        }
-
-        a:hover {
-            color: #1e3c72;
-            text-decoration: underline;
-        }
-     #certificates
-        { 
-            padding: 2rem;
-            background: #f9fafb;
-        }
-        #certificates h2 
-        { 
-            font-size: 1.8rem;
-            margin-bottom: 1rem; 
-        } 
-        .cert-grid 
-        {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; 
-        }
-        .cert-grid a { display: block; padding: 1rem; 
-                      background: #fff; 
-                      border: 1px solid #ddd;
-                      border-radius: 6px;
-                      text-align: center; 
-                      text-decoration: none; 
-                      color: #1d4ed8;
-                      transition: 0.3s;
-                     }
-        .cert-grid a:hover 
-        { 
-            background: #eef2ff;
-            border-color: #c7d2fe;
-        }
-    
-.email-text {
-  color: blue;        /* makes the text blue */
-  font-weight: 600;   /* optional: bold */
-  font-size: 1rem;    /* adjust size as needed */
-}
-           a {
-  color: #6f42c1;
-  font-style: italic;
-  text-decoration: none;
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(to right,#eef2f3,#d9e4f5);
+  color:#333;
 }
 
-a:hover {
-  text-decoration: underline;
-  color: #5a32b0;
+/* MAIN GRID */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:50px;
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:50px;
 }
 
+/* BIG HEADER */
+.header{
+  grid-column:span 2;
+  text-align:center;
+}
 
+.header h1{
+  font-size:72px;
+  font-weight:800;
+  margin:0;
+  color:#1e3c72;
+}
 
+.header p{
+  font-size:20px;
+  color:#555;
+}
 
-    </style>
-</head>
+/* LEFT CONTENT */
+.about h2,
+.projects h2,
+.certificates h2{
+  font-size:26px;
+  color:#1e3c72;
+  margin-bottom:10px;
+}
 
-<body>
+.about p{
+  line-height:1.8;
+}
 
-    <h1>Hello, I'm Azeeza</h1>
-    <p>Student | Python Learner</p>
+/* SKILLS */
+.skills h2{
+  font-size:26px;
+  color:#1e3c72;
+}
 
-    <h2>About Me</h2>
-  <p>
-    My Self AZEEZA SHAIK. I am a passionate about web developer with skills in HTML, CSS, and Python. 
-    I enjoy creating responsive, user-friendly websites and continuously learning new technologies 
-    to improve my projects.And I was passionate to learn Cloud Engineering. I am learning Python and Web Development. </p>
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
 
-    <h2>Skills</h2>
-    <ul>
-        <li>HTML & CSS </li>
-        <li>Java (Basics)</li>
-        <li>Python (Basics)</li>
-    </ul>
+.skill{
+  background:white;
+  padding:15px;
+  border-radius:20px;
+  text-align:center;
+  font-weight:500;
+  box-shadow:0 6px 12px rgba(0,0,0,0.1);
+}
 
-  
-    <div class="projects">
-  <h2>Projects</h2>
-  <ol>
-    <li>Number Guessing Game (Python)</li>
-    <li>Personal Portfolio Website - By using HTML and CSS ,JavaScript,hosted on Github Pages </li>
-  </ol>
-</div>
-<h2> Email: shaikazeeza7386@gmail.com</h2>
-  <div class="github-block">
-    <span>GitHub:</span>
-    <a href="https://shaikazeeza7386-dot.github.io/index/" target="_blank">
-      shaikazeeza7386-dot.github.io/index/
-    </a>
-  </div>
-    <section id="certificates">
-        <h2>Certificates</h2>
-        <div class="cert-grid">
-            <a href="certificate1.jpeg" target="_blank">Certificate 1</a> 
-            <a href="certificate2.png" target="_blank">Certificate 2</a>
-            <a href="certificate3.png" target="_blank">Certificate 3</a> 
-        </div>
-    </section>
-</body>
-</html>
+/* PROJECTS */
+.projects{
+  grid-column:span 2;
+}
 
+.project-list li{
+  background:white;
+  padding:15px;
+  border-radius:10px;
+  margin-bottom:10px;
+  box-shadow:0 6px 12px rgba(0,0,0,0.1);
+}
 
+/* CONTACT */
+.contact{
+  grid-column:span 2;
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 6px 12px rgba(0,0,0,0.1);
+}
 
+/* CERTIFICATES */
+.certificates{
+  grid-column:span 2;
+}
 
+.cert-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+}
 
+.cert-grid a{
+  background:white;
+  padding:15px;
+  border-radius:10px;
+  text-align:center;
+  text-decoration:none;
+  color:#1e3c72;
+  box-shadow:0 6px 12px rgba(0,0,0,0.1);
+}
 
+.cert-grid a:hover{
+  background:#eef2ff;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* LINKS */
+a{
+  color:#5a32b0;
