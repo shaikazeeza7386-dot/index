@@ -126,3 +126,87 @@ body{
 /* LINKS */
 a{
   color:#5a32b0;
+  text-decoration:none;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .container{
+    grid-template-columns:1fr;
+  }
+  .header h1{
+    font-size:56px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>AZEEZA</h1>
+    <p>Student | Python Learner</p>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="about">
+    <h2>About Me</h2>
+    <p>
+      My Self AZEEZA SHAIK. I am a passionate about web developer with skills in HTML, CSS, and Python.
+      I enjoy creating responsive, user-friendly websites and continuously learning new technologies
+      to improve my projects.And I was passionate to learn Cloud Engineering.
+      I am learning Python and Web Development.
+    </p>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">HTML & CSS</div>
+      <div class="skill">Java (Basics)</div>
+      <div class="skill">Python (Basics)</div>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="projects">
+    <h2>Projects</h2>
+    <ol class="project-list">
+      <li>Number Guessing Game (Python)</li>
+      <li>Personal Portfolio Website - By using HTML and CSS ,JavaScript,hosted on Github Pages</li>
+    </ol>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact">
+    <p><strong>Email:</strong> shaikazeeza7386@gmail.com</p>
+    <p>
+      <strong>GitHub:</strong>
+      <a href="https://shaikazeeza7386-dot.github.io/index/" target="_blank">
+        shaikazeeza7386-dot.github.io/index/
+      </a>
+    </p>
+  </div>
+
+  <!-- CERTIFICATES -->
+  <div class="certificates">
+    <h2>Certificates</h2>
+    <div class="cert-grid">
+      <a href="certificate1.jpeg" target="_blank">Certificate 1</a>
+      <a href="certificate2.png" target="_blank">Certificate 2</a>
+      <a href="certificate3.png" target="_blank">Certificate 3</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
