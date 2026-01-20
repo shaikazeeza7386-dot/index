@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,139 +7,165 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
-body{
-  margin:0;
-  font-family:'Poppins',sans-serif;
-  background:linear-gradient(to right,#eef2f3,#d9e4f5);
-  color:#333;
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e0e7ff, #f8fafc);
+  color: #1f2933;
 }
 
 /* MAIN GRID */
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:50px;
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  gap:50px;
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
 }
 
-/* BIG HEADER */
-.header{
-  grid-column:span 2;
-  text-align:center;
+/* HEADER */
+.header {
+  grid-column: span 2;
+  text-align: center;
 }
 
-.header h1{
-  font-size:72px;
-  font-weight:800;
-  margin:0;
-  color:#1e3c72;
+.header h1 {
+  font-size: 80px;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(90deg, #1e3c72, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.header p{
-  font-size:20px;
-  color:#555;
+.header p {
+  font-size: 20px;
+  color: #475569;
+  margin-top: 10px;
 }
 
-/* LEFT CONTENT */
-.about h2,
-.projects h2,
-.certificates h2{
-  font-size:26px;
-  color:#1e3c72;
-  margin-bottom:10px;
+/* GLASS CARD */
+.card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 20px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.about p{
-  line-height:1.8;
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 45px rgba(0,0,0,0.12);
+}
+
+/* SECTION TITLES */
+.card h2 {
+  margin-top: 0;
+  font-size: 26px;
+  color: #1e3c72;
+  position: relative;
+}
+
+.card h2::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background: linear-gradient(90deg, #6366f1, #1e3c72);
+  display: block;
+  margin-top: 6px;
+  border-radius: 10px;
+}
+
+/* ABOUT TEXT */
+.card p {
+  line-height: 1.9;
+  font-size: 16px;
 }
 
 /* SKILLS */
-.skills h2{
-  font-size:26px;
-  color:#1e3c72;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
 }
 
-.skills-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:15px;
-}
-
-.skill{
-  background:white;
-  padding:15px;
-  border-radius:20px;
-  text-align:center;
-  font-weight:500;
-  box-shadow:0 6px 12px rgba(0,0,0,0.1);
+.skill {
+  background: linear-gradient(135deg, #eef2ff, #ffffff);
+  padding: 14px;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: 500;
+  border: 1px solid #e0e7ff;
 }
 
 /* PROJECTS */
-.projects{
-  grid-column:span 2;
+.projects {
+  grid-column: span 2;
 }
 
-.project-list li{
-  background:white;
-  padding:15px;
-  border-radius:10px;
-  margin-bottom:10px;
-  box-shadow:0 6px 12px rgba(0,0,0,0.1);
+.project-list li {
+  list-style: none;
+  background: linear-gradient(135deg, #ffffff, #f8fafc);
+  padding: 15px 18px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  border-left: 5px solid #6366f1;
 }
 
 /* CONTACT */
-.contact{
-  grid-column:span 2;
-  background:white;
-  padding:20px;
-  border-radius:10px;
-  box-shadow:0 6px 12px rgba(0,0,0,0.1);
-}
-
-/* CERTIFICATES */
-.certificates{
-  grid-column:span 2;
-}
-
-.cert-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:15px;
-}
-
-.cert-grid a{
-  background:white;
-  padding:15px;
-  border-radius:10px;
-  text-align:center;
-  text-decoration:none;
-  color:#1e3c72;
-  box-shadow:0 6px 12px rgba(0,0,0,0.1);
-}
-
-.cert-grid a:hover{
-  background:#eef2ff;
+.contact {
+  grid-column: span 2;
+  display: grid;
+  gap: 10px;
 }
 
 /* LINKS */
-a{
-  color:#5a32b0;
-  text-decoration:none;
+a {
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-a:hover{
-  text-decoration:underline;
+a:hover {
+  text-decoration: underline;
+}
+
+/* CERTIFICATES */
+.certificates {
+  grid-column: span 2;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+}
+
+.cert-grid a {
+  background: linear-gradient(135deg, #ffffff, #eef2ff);
+  padding: 18px;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 12px 20px rgba(0,0,0,0.08);
 }
 
 /* RESPONSIVE */
-@media(max-width:900px){
-  .container{
-    grid-template-columns:1fr;
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
   }
-  .header h1{
-    font-size:56px;
+
+  .header h1 {
+    font-size: 56px;
   }
 }
 </style>
@@ -156,7 +182,7 @@ a:hover{
   </div>
 
   <!-- ABOUT -->
-  <div class="about">
+  <div class="card">
     <h2>About Me</h2>
     <p>
       My Self AZEEZA SHAIK. I am a passionate about web developer with skills in HTML, CSS, and Python.
@@ -167,7 +193,7 @@ a:hover{
   </div>
 
   <!-- SKILLS -->
-  <div class="skills">
+  <div class="card">
     <h2>Skills</h2>
     <div class="skills-grid">
       <div class="skill">HTML & CSS</div>
@@ -177,7 +203,7 @@ a:hover{
   </div>
 
   <!-- PROJECTS -->
-  <div class="projects">
+  <div class="projects card">
     <h2>Projects</h2>
     <ol class="project-list">
       <li>Number Guessing Game (Python)</li>
@@ -186,7 +212,7 @@ a:hover{
   </div>
 
   <!-- CONTACT -->
-  <div class="contact">
+  <div class="contact card">
     <p><strong>Email:</strong> shaikazeeza7386@gmail.com</p>
     <p>
       <strong>GitHub:</strong>
@@ -197,7 +223,7 @@ a:hover{
   </div>
 
   <!-- CERTIFICATES -->
-  <div class="certificates">
+  <div class="certificates card">
     <h2>Certificates</h2>
     <div class="cert-grid">
       <a href="certificate1.jpeg" target="_blank">Certificate 1</a>
@@ -210,3 +236,4 @@ a:hover{
 
 </body>
 </html>
+
