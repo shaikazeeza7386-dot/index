@@ -1,191 +1,132 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Portfolio</title>
+  <title> Portfolio</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #eef2f3, #d9e4f5);
-            color: #333;
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff;
+      color: #000;
+    }
 
-        /* MAIN GRID */
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 30px;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 25px;
-        }
+    /* MAIN GRID */
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 50px;
+      padding: 50px;
+    }
 
-        /* HEADER */
-        .header {
-            text-align: center;
-        }
+    /* HEADER */
+    .header {
+      grid-column: span 2;
+    }
 
-        .header h1 {
-            font-size: 42px;
-            color: #1e3c72;
-            margin-bottom: 5px;
-        }
+    .header h1 {
+      font-size: 36px;
+      margin-bottom: 5px;
+    }
 
-        .header p {
-            font-size: 18px;
-            color: #555;
-        }
+    .header p {
+      font-size: 18px;
+      margin-top: 0;
+    }
 
-        /* CARD STYLE */
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
+    /* LEFT SECTION */
+    .left h2 {
+      font-size: 34px;
+      margin: 30px 0 10px;
+    }
 
-        .card h2 {
-            color: #1e3c72;
-            margin-bottom: 10px;
-        }
+    .left h3 {
+      margin-top: 0;
+      font-weight: 500;
+    }
 
-        /* SKILLS GRID */
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 15px;
-        }
+    .left h4 {
+      font-size: 26px;
+      margin-top: 50px;
+    }
 
-        .skill {
-            background: #eef2ff;
-            padding: 10px;
-            border-radius: 20px;
-            text-align: center;
-            font-weight: 500;
-            color: #1e3c72;
-        }
+    .left p {
+      font-size: 16px;
+      line-height: 1.8;
+      max-width: 650px;
+    }
 
-        /* PROJECTS LIST */
-        .projects ol li {
-            background: #f9fafb;
-            padding: 10px;
-            border-radius: 6px;
-            margin-bottom: 10px;
-        }
+    /* SKILLS SECTION */
+    .skills h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
 
-        /* LINKS */
-        a {
-            color: #5a32b0;
-            text-decoration: none;
-            font-weight: 500;
-        }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
+    .skill-card {
+      background: #f3f3f3;
+      padding: 15px;
+      text-align: center;
+      border-radius: 8px;
+      font-weight: 500;
+    }
 
-        /* CERTIFICATES GRID */
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
 
-        .cert-grid a {
-            display: block;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            text-align: center;
-            background: #f8fafc;
-        }
-
-        .cert-grid a:hover {
-            background: #eef2ff;
-        }
-
-        /* RESPONSIVE */
-        @media (min-width: 768px) {
-            .container {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .header {
-                grid-column: span 2;
-            }
-
-            .certificates {
-                grid-column: span 2;
-            }
-        }
-    </style>
+      .header {
+        grid-column: span 1;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
+  <div class="container">
 
     <!-- HEADER -->
     <div class="header">
-        <h1>Hello, I'm Azeeza</h1>
-        <p>Student | Python Learner</p>
+      <h1>Welcome to My Portfolio</h1>
+      <p>Aspiring Software Developer</p>
     </div>
 
-    <!-- ABOUT -->
-    <div class="card">
-        <h2>About Me</h2>
-        <p>
-            My name is Azeeza Shaik. I am passionate about web development with skills in HTML, CSS, and Python.
-            I enjoy creating responsive websites and I am interested in Cloud Engineering.
-        </p>
+    <!-- LEFT CONTENT -->
+    <div class="left">
+      <h2>AZEEZA SHAIK</h2>
+      <h3>Computer Science Student</h3>
+
+      <h4>About Me :</h4>
+      <p>
+        Hello! I am Azeeza, a Computer Science student passionate about web development
+        and Python programming. I enjoy creating responsive and user-friendly websites.
+        I am continuously learning new technologies and I am also interested in
+        Cloud Engineering to enhance my technical skills.
+      </p>
     </div>
 
-    <!-- SKILLS -->
-    <div class="card">
-        <h2>Skills</h2>
-        <div class="skills">
-            <div class="skill">HTML & CSS</div>
-            <div class="skill">Java (Basics)</div>
-            <div class="skill">Python (Basics)</div>
-        </div>
+    <!-- RIGHT SKILLS -->
+    <div class="skills">
+      <h3>Skills :</h3>
+      <div class="skills-grid">
+        <div class="skill-card">HTML & CSS</div>
+        <div class="skill-card">Java (Basics)</div>
+        <div class="skill-card">Python (Basics)</div>
+        <div class="skill-card">Web Development</div>
+      </div>
     </div>
 
-    <!-- PROJECTS -->
-    <div class="card projects">
-        <h2>Projects</h2>
-        <ol>
-            <li>Number Guessing Game (Python)</li>
-            <li>Personal Portfolio Website (HTML, CSS, JavaScript)</li>
-        </ol>
-    </div>
-
-    <!-- CONTACT -->
-    <div class="card">
-        <h2>Contact</h2>
-        <p>Email: <strong>shaikazeeza7386@gmail.com</strong></p>
-        <p>
-            Portfolio:
-            <a href="https://shaikazeeza7386-dot.github.io/" target="_blank">
-                shaikazeeza7386-dot.github.io
-            </a>
-        </p>
-    </div>
-
-    <!-- CERTIFICATES -->
-    <div class="card certificates">
-        <h2>Certificates</h2>
-        <div class="cert-grid">
-            <a href="certificate1.jpeg" target="_blank">Certificate 1</a>
-            <a href="certificate2.png" target="_blank">Certificate 2</a>
-            <a href="certificate3.png" target="_blank">Certificate 3</a>
-        </div>
-    </div>
-
-</div>
+  </div>
 
 </body>
 </html>
