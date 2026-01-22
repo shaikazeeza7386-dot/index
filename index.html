@@ -9,19 +9,22 @@
 <style>
   background: linear-gradient(135deg, #e0e7ff, #f8fafc);
 .photo-circle {
-    width: 320px;       /* circle size */
+    width: 320px;          /* big circle */
     height: 320px;
     border-radius: 50%;
-    overflow: hidden;   /* 🔥 this makes it circle */
-    border: 5px solid #ffffff;
+    overflow: hidden;      /* 🔥 makes it circle */
+    border: 5px solid #fff;
     margin-top: 40px;
 }
 
 .photo-circle img {
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* 🔥 crops properly */
+    object-fit: cover;     /* 🔥 fills circle properly */
+    display: block;
 }
+
+    
 
 /* RESET */
 * {
@@ -210,10 +213,8 @@ a:hover {
 
 <body>
  
-<div class="photo">
-    <div class="photo-circle">
-        <img src="profile-photo.jpg" alt="Azeeza Photo">
-    </div>
+<div class="photo-circle">
+    <img src="profile-photo.jpg" alt="Azeeza Photo">
 </div>
 
 
@@ -282,6 +283,7 @@ a:hover {
 
 </body>
 </html>
+
 
 
 
