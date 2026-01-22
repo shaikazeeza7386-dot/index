@@ -8,13 +8,22 @@
 
 <style>
   background: linear-gradient(135deg, #e0e7ff, #f8fafc);
- img {
-  width: auto;
-  height: auto;
+.profile-circle {
+    width: 300px;          /* circle size */
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;      /* 🔥 THIS IS THE KEY */
+    border: 6px solid white;
+    margin-top: 40px;
+    background: #fff;
 }
 
-.photo img {
-  border-radius: 50%;
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* 🔥 crops face correctly */
+    object-position: center top; /* 🔥 keeps face centered */
+    display: block;
 }
 
 /* RESET */
@@ -267,6 +276,7 @@ a:hover {
 
 </body>
 </html>
+
 
 
 
