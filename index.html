@@ -8,16 +8,20 @@
 
 <style>
   background: linear-gradient(135deg, #e0e7ff, #f8fafc);
-.photo img {
-    width: 320px;      /* ⬅️ increase size */
-    height: 320px;     /* ⬅️ same value */
+.photo-circle {
+    width: 320px;       /* circle size */
+    height: 320px;
     border-radius: 50%;
-    object-fit: cover;
+    overflow: hidden;   /* 🔥 this makes it circle */
     border: 5px solid #ffffff;
-
-    margin-top: 40px;  /* keeps it a little down */
+    margin-top: 40px;
 }
 
+.photo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* 🔥 crops properly */
+}
 
 /* RESET */
 * {
@@ -206,15 +210,11 @@ a:hover {
 
 <body>
  
-  <section class="hero">
-    <div class="photo">
-        <img src="profile-photo.jpg" alt="Shaik Azeeza Photo">
+<div class="photo">
+    <div class="photo-circle">
+        <img src="profile-photo.jpg" alt="Azeeza Photo">
     </div>
-
-    <div class="intro">
-        <!-- your name, about, buttons -->
-    </div>
-</section>
+</div>
 
 
 <div class="container">
@@ -282,6 +282,7 @@ a:hover {
 
 </body>
 </html>
+
 
 
 
