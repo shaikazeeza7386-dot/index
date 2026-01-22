@@ -8,17 +8,27 @@
 
 <style>
   background: linear-gradient(135deg, #e0e7ff, #f8fafc);
-.circle-photo {
-    width: 300px;          /* size of circle */
-    height: 300px;
-    object-fit: cover;
-
-    clip-path: circle(50% at 50% 50%);  /* 🔥 forces perfect circle */
-    -webkit-clip-path: circle(50% at 50% 50%);
-
+img {
+    width: 100%;
+    height: auto;
+}
+.profile-pic {
+    width: 300px;
+    aspect-ratio: 1 / 1;   /* 🔥 forces square */
+    border-radius: 50%;
+    overflow: hidden;     /* 🔥 clips into circle */
     margin-top: 40px;
+    background: #fff;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* 🔥 prevents top-sticking */
+    object-position: center;
     display: block;
 }
+
 
 
 /* RESET */
@@ -204,7 +214,10 @@ a:hover {
 </style>
 </head>
 <body>
- <img src="profile-photo.jpg" alt="Azeeza Photo" class="circle-photo">
+<div class="profile-pic">
+    <img src="profile-photo.jpg" alt="Azeeza Photo">
+</div>
+
 
 
   <div class="side">
@@ -269,6 +282,7 @@ a:hover {
 
 </body>
 </html>
+
 
 
 
