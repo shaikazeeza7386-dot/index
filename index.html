@@ -1,176 +1,103 @@
-<!DOCTYPE html
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Azeeza Portfolio</title>
 
+<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
-   body {
-            font-family: 'Poppins', sans-serif;
-            background: #f6f6f6;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 60px;
-            padding: 80px 50px;
-        }
-
-        /* Profile Circle */
-        .profile-pic {
-            width: 320px;
-            aspect-ratio: 1 / 1;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 5px solid #fff;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
- .profile-pic img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* About Section */
-        .about {
-            max-width: 500px;
-        }
-
-        .about h1 {
-            font-size: 42px;
-            margin: 0;
-        }
-    .about h3 {
-            margin: 10px 0;
-            font-weight: 500;
-        }
-
-        .about p {
-            line-height: 1.6;
-            color: #555;
-        }
-   nav {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-  background: linear-gradient(135deg, #e0e7ff, #f8fafc);
-  .profile{
-  text-align:center;
-  padding:20px;
-  border:1px solid #ddd;
-  border-radius:10px;
-  width:250px;
-}
-
-.profile img{
-  width:150px;
-  height:150px;
-  border-radius:50%;
-}
-
-img {
-    width: 100%;
-    height: auto;
-}
-.profile-pic {
-    width: 300px;
-    aspect-ratio: 1 / 1;   /* 🔥 forces square */
-    border-radius: 50%;
-    overflow: hidden;     /* 🔥 clips into circle */
-    margin-top: 40px;
-    background: #fff;
-}
-
-.profile-pic img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;    /* 🔥 prevents top-sticking */
-    object-position: center;
-    display: block;
-}
-
-
-
 /* RESET */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 /* BODY */
 body {
-  margin: 0;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #e0e7ff, #f8fafc);
   color: #1f2933;
 }
 
-/* MAIN GRID */
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 60px 40px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 50px;
-}
-
-/* HEADER */
-.header {
-  grid-column: span 2;
+/* NAVBAR */
+nav {
+  background: #1e3c72;
+  padding: 12px;
   text-align: center;
 }
 
-.header h1 {
-  font-size: 80px;
-  font-weight: 800;
-  margin: 0;
-  background: linear-gradient(90deg, #1e3c72, #6366f1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
 }
 
-.header p {
-  font-size: 20px;
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* MAIN CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 30px;
+}
+
+/* PROFILE SECTION */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.profile-pic {
+  width: 260px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile h1 {
+  font-size: 32px;
+  margin-top: 15px;
+}
+
+.profile p {
+  font-size: 18px;
   color: #475569;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
 /* GLASS CARD */
 .card {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255,255,255,0.8);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 25px;
+  margin-bottom: 30px;
   box-shadow: 0 20px 30px rgba(0,0,0,0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 30px 45px rgba(0,0,0,0.12);
-}
-
-/* SECTION TITLES */
+/* CARD TITLES */
 .card h2 {
-  margin-top: 0;
   font-size: 26px;
   color: #1e3c72;
+  margin-bottom: 15px;
   position: relative;
 }
 
@@ -184,16 +111,17 @@ body {
   border-radius: 10px;
 }
 
-/* ABOUT TEXT */
+/* TEXT */
 .card p {
-  line-height: 1.9;
+  line-height: 1.8;
   font-size: 16px;
+  color: #374151;
 }
 
 /* SKILLS */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 15px;
 }
 
@@ -207,45 +135,33 @@ body {
 }
 
 /* PROJECTS */
-.projects {
-  grid-column: span 2;
+.project-list {
+  padding-left: 20px;
 }
 
 .project-list li {
-  list-style: none;
-  background: linear-gradient(135deg, #ffffff, #f8fafc);
-  padding: 15px 18px;
-  border-radius: 14px;
-  margin-bottom: 12px;
-  border-left: 5px solid #6366f1;
+  margin-bottom: 10px;
 }
 
-/* CONTACT */
-.contact {
-  grid-column: span 2;
-  display: grid;
-  gap: 10px;
+/* GITHUB */
+.github-card {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  width: fit-content;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
 
-/* LINKS */
-a {
-  color: #4f46e5;
+.github-card a {
   text-decoration: none;
   font-weight: 500;
-}
-
-a:hover {
-  text-decoration: underline;
+  color: #1e3c72;
 }
 
 /* CERTIFICATES */
-.certificates {
-  grid-column: span 2;
-}
-
 .cert-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 18px;
 }
 
@@ -255,66 +171,53 @@ a:hover {
   border-radius: 16px;
   text-align: center;
   font-weight: 500;
+  text-decoration: none;
+  color: #1e3c72;
   box-shadow: 0 12px 20px rgba(0,0,0,0.08);
 }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
-  .container {
-    grid-template-columns: 1fr;
+@media (max-width: 768px) {
+  .profile-pic {
+    width: 200px;
   }
 
-  .header h1 {
-    font-size: 56px;
+  .profile h1 {
+    font-size: 26px;
   }
-}
-  .github-card {
-  background: white;
-  padding: 15px 20px;
-  border-radius: 10px;
-  width: fit-content;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-}
-
-.github-card a {
-  text-decoration: none;
-  font-weight: 500;
-  color: #1e3c72;
-  font-size: 16px;
-}
-
-.github-card a:hover {
-  color: #0f172a;
-  text-decoration: underline;
 }
 </style>
 </head>
+
 <body>
-   <nav>
-           <a href="about.html">About</a>
-   </nav>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <h1>Welcome to My Portfolio</h1>
-    <p> Software Developer</p>
-    <section id="home" class="section home">
-  <div class="home-container">
-       <div class="profile">
-  <div class="container">
-        <div class="profile-pic">
-            <img src="profile-photo.jpg" alt="Profile Photo">
-        </div>
-     <h1>AZEEZA SHAIK</h1>
-  <div>
-    <h3>About Me</h3>
-    <p>My Self AZEEZA SHAIK. I am a passionate about web developer with skills in HTML, CSS, and Python.
-      I enjoy creating responsive, user-friendly websites and continuously learning new technologies
-      to improve my projects.And I was passionate to learn Cloud Engineering.
-      I am learning Python and Web Development. </p>
-   </div>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="container" id="home">
+
+  <!-- PROFILE -->
+  <div class="profile">
+    <div class="profile-pic">
+      <img src="profile-photo.jpg" alt="Azeeza Photo">
+    </div>
+    <h1>AZEEZA SHAIK</h1>
+    <p>Software Developer</p>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="card" id="about">
+    <h2>About Me</h2>
+    <p>
+      My name is Azeeza Shaik. I am passionate about web development with skills in HTML,
+      CSS, JavaScript, and Python. I enjoy building responsive, user-friendly websites
+      and I am currently exploring Cloud Engineering.
+    </p>
+  </div>
+
   <!-- SKILLS -->
   <div class="card">
     <h2>Skills</h2>
@@ -324,25 +227,28 @@ a:hover {
       <div class="skill">Python (Basics)</div>
     </div>
   </div>
+
   <!-- PROJECTS -->
-  <div class="projects card">
+  <div class="card">
     <h2>Projects</h2>
     <ol class="project-list">
       <li>Number Guessing Game (Python)</li>
-      <li>Personal Portfolio Website - By using HTML and CSS ,JavaScript,hosted on Github Pages</li>
+      <li>Personal Portfolio Website (HTML, CSS, JavaScript)</li>
     </ol>
   </div>
+
   <!-- CONTACT -->
-  <div class="contact card">
+  <div class="card" id="contact">
     <h2>GitHub</h2>
-<div class="github-card">
-  <a href="https://github.com/shaikazeeza7386-dot" target="_blank">
-    https://github.com/shaikazeeza7386-dot
-  </a>
-</div>
+    <div class="github-card">
+      <a href="https://github.com/shaikazeeza7386-dot" target="_blank">
+        github.com/shaikazeeza7386-dot
+      </a>
+    </div>
   </div>
+
   <!-- CERTIFICATES -->
-  <div class="certificates card">
+  <div class="card">
     <h2>Certificates</h2>
     <div class="cert-grid">
       <a href="certificate1.jpeg" target="_blank">Certificate 1</a>
@@ -350,49 +256,8 @@ a:hover {
       <a href="certificate3.png" target="_blank">Certificate 3</a>
     </div>
   </div>
+
 </div>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
